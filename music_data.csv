@@ -1,0 +1,21 @@
+UserID,SongTitle,Genre,Musician,Rating
+1,Shape of You,Pop,Ed Sheeran,5
+1,Photograph,Pop,Ed Sheeran,4
+2,Blinding Lights,Pop,The Weeknd,5
+2,Starboy,Pop,The Weeknd,4
+3,Rockstar,Rap,Post Malone,5
+3,Circles,Pop,Post Malone,4
+4,Thinking Out Loud,Pop,Ed Sheeran,5
+4,Save Your Tears,Pop,The Weeknd,4
+5,Sunflower,Rap,Post Malone,5
+5,Goosebumps,Rap,Travis Scott,4
+6,Sicko Mode,Rap,Travis Scott,5
+6,Levitating,Pop,Dua Lipa,4
+7,Don't Start Now,Pop,Dua Lipa,5
+7,Break My Heart,Pop,Dua Lipa,4
+8,Lucid Dreams,Rap,Juice WRLD,5
+8,All Girls Are The Same,Rap,Juice WRLD,4
+9,Drivers License,Pop,Olivia Rodrigo,5
+9,Good 4 U,Pop,Olivia Rodrigo,5
+10,Positions,Pop,Ariana Grande,5
+10,7 rings,Pop,Ariana Grande,4 
