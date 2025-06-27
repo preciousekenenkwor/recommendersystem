@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Smart Music Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 2rem;
+        }
+
+        form {
+            margin-bottom: 1rem;
+        }
+
+        input[type="text"] {
+            padding: 0.5rem;
+            width: 80%;
+            font-size: 1rem;
+        }
+
+        button {
+            padding: 0.5rem;
+            font-size: 1rem;
+        }
+
+        h1, h2 {
+            color: #333;
+        }
+
+        ul.suggestions {
+            list-style-type: none;
+            padding: 0;
+            max-height: 300px;
+            overflow-y: auto;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        ul.suggestions li {
+            padding: 10px;
+            border-bottom: 1px solid #eee;
+            cursor: pointer;
+        }
+
+        ul.suggestions li:hover {
+            background-color: #f0f0f0;
+        }
+    </style>
+    <script>
+        function onSongClick(songText) {
+            alert("You clicked on: " + songText);
+            // TODO: You can add more logic here, like playing the song or navigating somewhere
+        }
+    </script>
+</head>
+<body>
+    <h1>🎵 Smart Music Dashboard</h1>
+
+    <form method="post">
+        <input type="text" name="song" placeholder="Enter song title, genre, artist or rating" required />
+        <button type="submit">Get Suggestions</button>
+    </form>
+
+    {% if song %}
+        <h2>Suggestions for "{{ song }}"</h2>
+        {% if results %}
+            <ul class="suggestions">
+                {% for item in results %}
+                    <li onclick="onSongClick('{{ item | replace("'", "\\'") | replace('"', '\\"') }}')">{{ item }}</li>
+
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>No suggestions found.</p>
+        {% endif %}
+    {% endif %}
+</body>
+</html>
